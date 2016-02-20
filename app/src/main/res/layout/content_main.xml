@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Height"
+        android:text="Gender"
         android:id="@+id/textView"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true" />
@@ -26,13 +26,13 @@
         android:layout_height="wrap_content"
         android:text="Weight"
         android:id="@+id/textView4"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignStart="@+id/buttonIncreaseWeight" />
+        android:layout_above="@+id/textView5"
+        android:layout_toEndOf="@+id/button5" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Increase Height"
+        android:text="Male"
         android:id="@+id/buttonIncreaseHeight"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true" />
@@ -40,7 +40,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Decrease Height"
+        android:text="Female"
         android:id="@+id/buttonDecreaseHeight"
         android:layout_below="@+id/buttonIncreaseHeight"
         android:layout_alignParentStart="true" />
@@ -50,8 +50,8 @@
         android:layout_height="wrap_content"
         android:text="Increase Weight"
         android:id="@+id/buttonIncreaseWeight"
-        android:layout_alignTop="@+id/buttonIncreaseHeight"
-        android:layout_toEndOf="@+id/buttonDecreaseHeight" />
+        android:layout_above="@+id/buttonDecreaseWeight"
+        android:layout_alignStart="@+id/textView5" />
 
     <Button
         android:layout_width="wrap_content"
@@ -61,31 +61,14 @@
         android:layout_alignBottom="@+id/buttonDecreaseHeight"
         android:layout_alignStart="@+id/buttonIncreaseWeight" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Male"
-        android:id="@+id/button"
-        android:layout_below="@+id/buttonDecreaseHeight"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Female"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button"
-        android:layout_toStartOf="@+id/buttonDecreaseWeight" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Current Estimated BAC"
         android:id="@+id/textView6"
-        android:layout_below="@+id/button2"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/buttonDecreaseWeight"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_marginTop="18dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="Male"
         android:id="@+id/textView3"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
@@ -111,8 +94,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textView5"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignStart="@+id/buttonIncreaseWeight" />
+        android:layout_above="@+id/buttonIncreaseWeight"
+        android:layout_alignStart="@+id/textView4" />
 
     <Button
         android:layout_width="wrap_content"
