@@ -66,9 +66,9 @@
         android:layout_height="wrap_content"
         android:text="Current Estimated BAC"
         android:id="@+id/textView6"
+        android:layout_marginTop="17dp"
         android:layout_below="@+id/buttonDecreaseWeight"
-        android:layout_toEndOf="@+id/textView5"
-        android:layout_marginTop="18dp" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="150 pounds"
         android:id="@+id/textView5"
         android:layout_above="@+id/buttonIncreaseWeight"
         android:layout_alignStart="@+id/textView4" />
