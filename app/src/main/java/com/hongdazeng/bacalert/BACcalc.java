@@ -31,7 +31,7 @@ public class BACcalc {
         if(gender == 0.73){
             gender = 0.66;
         }
-        else{
+        else {
             gender = 0.73;
         }
     }
