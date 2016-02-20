@@ -7,36 +7,36 @@ import java.text.DecimalFormat;
  */
 public class BACcalc {
     private double weight;
-    private int numDrinks;
+    private double ounce;
     private double gender;
     //double drinkPeriod;
     public BACcalc(){
-        weight = (150/2.2406);
-        gender = 0.58;
-        numDrinks = 0;
+        weight = 150;
+        gender = 0.73;
+        ounce = 0;
     }
     public void setWeight(int weight){
-        this.weight = (weight/2.2406);
+        this.weight = weight;
     }
     public double getWeight(){
         return weight;
     }
     public void addDrinks(){
-        numDrinks += 1;
+        ounce += 0.6;
     }
     //public void setDrinkPeriod(double drinkPeriod){
         //this.drinkPeriod = drinkPeriod;
     //}
     public void changeGender(){
-        if(gender == 0.58){
-            gender = 0.49;
+        if(gender == 0.73){
+            gender = 0.66;
         }
         else{
-            gender = 0.58;
+            gender = 0.73;
         }
     }
     public double getBAC(){
-        double BAC = (0.806* numDrinks * 1.2)/(gender * weight) - (0.017 * 0.25) + 0.001; //0.25 = 15 minutes drink period
+        double BAC = (ounce * 5.14)/(weight * gender) - 0.15 * 0.25; //0.25 = 15 minutes drink period
         DecimalFormat formatter = new DecimalFormat("#0.00");
         System.out.println(formatter.format(BAC));
         return BAC;
