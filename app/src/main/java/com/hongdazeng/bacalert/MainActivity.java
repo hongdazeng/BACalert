@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 setWeight[0]++;
                 newCal.setWeight((int) setWeight[0]);
                 weightDisplay.setText("" + setWeight[0] + " pounds");
-                String response = "" + (int) newCal.getBAC();
+                String response = "" + formatter.format(newCal.getBAC());
                 BACdisplay.setText(response);
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 setWeight[0]--;
                 newCal.setWeight((int) setWeight[0]);
                 weightDisplay.setText("" + setWeight[0] + " pounds");
-                String response = "" + (int) newCal.getBAC();
+                String response = "" + formatter.format(newCal.getBAC());
                 BACdisplay.setText(response);
             }
         });
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newCal.setMale();
                 genderDisplay.setText("Male");
-                String response = "" + (int) newCal.getBAC();
+                String response = "" + formatter.format(newCal.getBAC());
                 BACdisplay.setText(response);
             }
         });
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newCal.setFemale();
                 genderDisplay.setText("Female");
-                String response = "" + (int) newCal.getBAC();
+                String response = "" + formatter.format(newCal.getBAC());
                 BACdisplay.setText(response);
             }
         });
