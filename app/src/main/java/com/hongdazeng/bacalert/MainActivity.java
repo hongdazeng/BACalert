@@ -8,17 +8,40 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        final double[] setWeight = {150};
+        final BACcalc newCal = new BACcalc();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final TextView genderDisplay = (TextView) findViewById(R.id.textViewGender);
+        final TextView weightDisplay = (TextView) findViewById(R.id.textViewWeight);
+        final TextView BACdisplay = (TextView) findViewById(R.id.textViewBAC);
+        TextView BACwarn = (TextView) findViewById(R.id.textViewBACWarn);
+
+        Button incWeight = (Button) findViewById(R.id.buttonIncreaseWeight);
+        Button decWeight = (Button) findViewById(R.id.buttonDecreaseWeight);
+        Button setMale = (Button) findViewById(R.id.buttonSetMale);
+        Button setFemale = (Button) findViewById(R.id.buttonSetFemale);
+
+        Button addBeer = (Button) findViewById(R.id.buttonAddBeer);
+        Button addWine = (Button) findViewById(R.id.buttonAddWine);
+        Button addLiquor = (Button) findViewById(R.id.buttonAddLiquor);
+
+        Button resetButton = (Button) findViewById(R.id.buttonReset);
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,6 +50,87 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        incWeight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setWeight[0]++;
+                newCal.setWeight((int) setWeight[0]);
+                weightDisplay.setText("" + setWeight[0] + " pounds");
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        decWeight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setWeight[0]--;
+                newCal.setWeight((int) setWeight[0]);
+                weightDisplay.setText("" + setWeight[0] + " pounds");
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        setMale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newCal.setMale();
+                genderDisplay.setText("Male");
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        setFemale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newCal.setFemale();
+                genderDisplay.setText("Female");
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        setFemale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newCal.setFemale();
+                genderDisplay.setText("Female");
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        addBeer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newCal.addDrinks();
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        addLiquor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newCal.addDrinks();
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+        addWine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newCal.addDrinks();
+                String response = "" + (int) newCal.getBAC();
+                BACdisplay.setText(response);
+            }
+        });
+
+
     }
 
     @Override

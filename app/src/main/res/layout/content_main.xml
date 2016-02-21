@@ -11,38 +11,38 @@
 
     <TextView android:text="Welcome to BAC Alert" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textViewWelcome" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gender"
-        android:id="@+id/textView"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/textViewGenderLabel"
+        android:layout_below="@+id/textViewWelcome"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Weight"
-        android:id="@+id/textView4"
-        android:layout_above="@+id/textView5"
-        android:layout_toEndOf="@+id/button5" />
+        android:id="@+id/textViewWeightLabel"
+        android:layout_above="@+id/textViewWeight"
+        android:layout_toEndOf="@+id/buttonAddLiquor" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
-        android:id="@+id/buttonIncreaseHeight"
-        android:layout_below="@+id/textView3"
+        android:id="@+id/buttonSetMale"
+        android:layout_below="@+id/textViewGender"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Female"
-        android:id="@+id/buttonDecreaseHeight"
-        android:layout_below="@+id/buttonIncreaseHeight"
+        android:id="@+id/buttonSetFemale"
+        android:layout_below="@+id/buttonSetMale"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -51,32 +51,32 @@
         android:text="Increase Weight"
         android:id="@+id/buttonIncreaseWeight"
         android:layout_above="@+id/buttonDecreaseWeight"
-        android:layout_alignStart="@+id/textView5" />
+        android:layout_alignStart="@+id/textViewWeight" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Decrease Weight"
         android:id="@+id/buttonDecreaseWeight"
-        android:layout_alignBottom="@+id/buttonDecreaseHeight"
+        android:layout_alignBottom="@+id/buttonSetFemale"
         android:layout_alignStart="@+id/buttonIncreaseWeight" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Current Estimated BAC"
-        android:id="@+id/textView6"
+        android:id="@+id/textViewBACLabel"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/buttonDecreaseWeight"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignEnd="@+id/textViewBAC" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
+        android:id="@+id/textViewBAC"
+        android:layout_below="@+id/textViewBACLabel"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -84,8 +84,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Male"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
+        android:id="@+id/textViewGender"
+        android:layout_below="@+id/textViewGenderLabel"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -93,40 +93,40 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="150 pounds"
-        android:id="@+id/textView5"
+        android:id="@+id/textViewWeight"
         android:layout_above="@+id/buttonIncreaseWeight"
-        android:layout_alignStart="@+id/textView4" />
+        android:layout_alignStart="@+id/textViewWeightLabel" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Beer"
-        android:id="@+id/button3"
-        android:layout_alignTop="@+id/textView7"
+        android:id="@+id/buttonAddBeer"
+        android:layout_alignTop="@+id/textViewBAC"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Wine"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
+        android:id="@+id/buttonAddWine"
+        android:layout_below="@+id/buttonAddBeer"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Liquor"
-        android:id="@+id/button5"
-        android:layout_below="@+id/button4"
+        android:id="@+id/buttonAddLiquor"
+        android:layout_below="@+id/buttonAddWine"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
-        android:id="@+id/button6"
-        android:layout_below="@+id/textView8"
+        android:id="@+id/buttonReset"
+        android:layout_below="@+id/textViewBACWarn"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Currently Safe"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/textView7"
+        android:id="@+id/textViewBACWarn"
+        android:layout_below="@+id/textViewBAC"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
