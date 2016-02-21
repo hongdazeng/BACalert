@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView genderDisplay = (TextView) findViewById(R.id.textViewGender);
         final TextView weightDisplay = (TextView) findViewById(R.id.textViewWeight);
         final TextView BACdisplay = (TextView) findViewById(R.id.textViewBAC);
-        TextView BACwarn = (TextView) findViewById(R.id.textViewBACWarn);
+        final TextView BACwarn = (TextView) findViewById(R.id.textViewBACWarn);
 
         Button incWeight = (Button) findViewById(R.id.buttonIncreaseWeight);
         Button decWeight = (Button) findViewById(R.id.buttonDecreaseWeight);
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Button addLiquor = (Button) findViewById(R.id.buttonAddLiquor);
 
         Button resetButton = (Button) findViewById(R.id.buttonReset);
+        final DecimalFormat formatter = new DecimalFormat("#0.000");
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +110,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 newCal.addDrinks();
-                String response = "" + (int) newCal.getBAC();
+                String response = "" + formatter.format(newCal.getBAC());
+                if(newCal.getBAC() >= 0.01){
+                    BACwarn.setText("Your BAC is rising!");
+                }
+                else if(newCal.getBAC() >= 0.04){
+                    BACwarn.setText("You should not drive.");
+                }
+                else if(newCal.getBAC() >= 0.1){
+                    BACwarn.setText("You should get help.");
+                }
                 BACdisplay.setText(response);
             }
         });
@@ -116,7 +128,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 newCal.addDrinks();
-                String response = "" + (int) newCal.getBAC();
+                String response = "" + formatter.format(newCal.getBAC());
+                if(newCal.getBAC() >= 0.01){
+                    BACwarn.setText("Your BAC is rising!");
+                }
+                else if(newCal.getBAC() >= 0.04){
+                    BACwarn.setText("You should not drive.");
+                }
+                else if(newCal.getBAC() >= 0.1){
+                    BACwarn.setText("You should get help.");
+                }
                 BACdisplay.setText(response);
             }
         });
@@ -125,14 +146,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 newCal.addDrinks();
-                String response = "" + (int) newCal.getBAC();
+                String response = "" +  formatter.format(newCal.getBAC());
+                if(newCal.getBAC() >= 0.01){
+                    BACwarn.setText("Your BAC is rising!");
+                }
+                else if(newCal.getBAC() >= 0.04){
+                    BACwarn.setText("You should not drive.");
+                }
+                else if(newCal.getBAC() >= 0.1){
+                    BACwarn.setText("You should get help.");
+                }
                 BACdisplay.setText(response);
             }
         });
 
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

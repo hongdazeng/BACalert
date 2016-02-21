@@ -49,7 +49,7 @@ public class BACcalc {
             return 0;
         }
         double BAC = ounce * 5.14/weight * gender - 0.015 * 0.25; //0.25 = 15 minutes drink period
-        BAC *= 100;
+        //BAC *= 100;
         return BAC;
     }
 
@@ -58,7 +58,6 @@ public class BACcalc {
         DecimalFormat formatter = new DecimalFormat("#0.000");
         System.out.println(formatter.format(newCal.getBAC()));
         newCal.addDrinks();
-        formatter = new DecimalFormat("#0.000");
         System.out.println(formatter.format(newCal.getBAC()));
     }
 
