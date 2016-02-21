@@ -111,13 +111,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newCal.addDrinks();
                 String response = "" + formatter.format(newCal.getBAC());
-                if(newCal.getBAC() >= 0.01){
+                if (newCal.getBAC() >= 0.01) {
                     BACwarn.setText("Your BAC is rising!");
                 }
-                else if(newCal.getBAC() >= 0.04){
+                if (newCal.getBAC() >= 0.04) {
                     BACwarn.setText("You should not drive.");
                 }
-                else if(newCal.getBAC() >= 0.1){
+                if (newCal.getBAC() >= 0.1) {
                     BACwarn.setText("You should get help.");
                 }
                 BACdisplay.setText(response);
@@ -129,13 +129,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newCal.addDrinks();
                 String response = "" + formatter.format(newCal.getBAC());
-                if(newCal.getBAC() >= 0.01){
+                if (newCal.getBAC() >= 0.01) {
                     BACwarn.setText("Your BAC is rising!");
                 }
-                else if(newCal.getBAC() >= 0.04){
+                if (newCal.getBAC() >= 0.04) {
                     BACwarn.setText("You should not drive.");
                 }
-                else if(newCal.getBAC() >= 0.1){
+                if (newCal.getBAC() >= 0.1) {
                     BACwarn.setText("You should get help.");
                 }
                 BACdisplay.setText(response);
@@ -146,14 +146,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 newCal.addDrinks();
-                String response = "" +  formatter.format(newCal.getBAC());
-                if(newCal.getBAC() >= 0.01){
+                String response = "" + formatter.format(newCal.getBAC());
+                if (newCal.getBAC() >= 0.01) {
                     BACwarn.setText("Your BAC is rising!");
                 }
-                else if(newCal.getBAC() >= 0.04){
+                if (newCal.getBAC() >= 0.04) {
                     BACwarn.setText("You should not drive.");
                 }
-                else if(newCal.getBAC() >= 0.1){
+                if (newCal.getBAC() >= 0.1) {
                     BACwarn.setText("You should get help.");
                 }
                 BACdisplay.setText(response);
@@ -162,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
